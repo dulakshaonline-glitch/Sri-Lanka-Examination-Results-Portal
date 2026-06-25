@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<div class="box">
+
+<input id="u" placeholder="admin">
+<input id="p" type="password" placeholder="1234">
+<button onclick="login()">Login</button>
+
+</div>
+
+<div id="panel" class="hidden">
+
+<div class="box">
+
+<h3>Student Info</h3>
+
+<input id="i" placeholder="Index">
+<input id="n" placeholder="Name">
+<input id="s" placeholder="School">
+<input id="y" placeholder="Year">
+
+<hr>
+
+<h3>Add / Edit Subject</h3>
+
+<input id="customSubject" placeholder="Subject Name">
+
+<select id="grade">
+<option>A</option>
+<option>B</option>
+<option>C</option>
+<option>D</option>
+<option>F</option>
+</select>
+
+<button onclick="addSubject()">Add / Update Subject</button>
+
+<div id="list"></div>
+
+<br>
+
+<button onclick="save()">Save Result</button>
+<button onclick="generateLink()">Share Link</button>
+<button onclick="deleteResult()">Delete Result</button>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<script src="firebase-config.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
